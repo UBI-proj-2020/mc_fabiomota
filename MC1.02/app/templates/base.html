@@ -1,0 +1,25 @@
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - Microblog</title>
+        {% else %}
+        <title>Welcome to Microblog</title>
+        {% endif %}
+    </head>
+    <body>
+        <div>
+            Microblog:
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('competicao') }}">Competicao</a>
+            <a href="{{ url_for('vercompeticao') }}">Ver Competicao</a>
+            <a href="{{ url_for('equipa') }}">Equipa</a>
+            <a href="{{ url_for('verequipa') }}">Ver Equipa</a>
+            <a href="{{ url_for('jogador') }}">Jogador</a>
+            <a href="{{ url_for('verjogador') }}">Ver Jogador</a>
+            <a href="{{ url_for('jogo') }}">Jogo</a>
+            <a href="{{ url_for('verjogo') }}">Ver Jogo</a>
+        </div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>

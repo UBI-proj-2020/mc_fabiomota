@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Equipa Casa</th>
+            <th>Equipa Fora</th>
+            <th>Data</th>
+            <th>Hora</th>
+            <th>Local</th>
+        </tr>
+        {% for j in jogo %}
+            <tr>
+                <th>{{ j.id }}</th>
+                <th>{{ j.equipa_casa }}</th>
+                <th>{{ j.equipa_fora }}</th>
+                <th>{{ j.data }}</th>
+                <th>{{ j.hora }}</th>
+                <th>{{ j.local }}</th>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+

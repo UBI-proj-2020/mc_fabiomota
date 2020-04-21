@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <style>
+
+            ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              background-color: #333;
+            }
+            
+            
+            div a {
+              padding: 14px 16px;
+              text-decoration: none;
+            }
+            
+            div a:hover {
+              background-color: #111;
+            }
+            
+            .footer {
+              padding: 20px;
+              text-align: center;
+              background: #ddd;
+              margin-top: 20px;
+            }
+            
+            .mensagens {
+              text-align: center;
+            }
+            
+            /* Style the topnav links */
+            .topnav a {
+              float: left;
+              display: block;
+              color: #f2f2f2;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+            }
+            
+            /* Change color on hover */
+            .topnav a:hover {
+              background-color: #ddd;
+              color: black;
+            }
+            
+        </style>
+        {% if title %}
+        <title>{{ title }} - Microblog</title>
+        {% else %}
+        <title>Welcome to Microblog</title>
+        {% endif %}
+    </head>
+    <body>
+        <div>
+            Microblog:
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('competicao') }}">Competicao</a>
+            <a href="{{ url_for('vercompeticao') }}">Ver Competicao</a>
+            <a href="{{ url_for('equipa') }}">Equipa</a>
+            <a href="{{ url_for('verequipa') }}">Ver Equipa</a>
+            <a href="{{ url_for('jogador') }}">Jogador</a>
+            <a href="{{ url_for('verjogador') }}">Ver Jogador</a>
+            <a href="{{ url_for('jogo') }}">Jogo</a>
+            <a href="{{ url_for('verjogo') }}">Ver Jogo</a>
+        </div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>

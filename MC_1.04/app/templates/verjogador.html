@@ -1,0 +1,24 @@
+{% extends "base2.html" %}
+
+{% block content %}
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Data Nascimento</th>
+            <th>Nacionalidade</th>
+            <th>Equipa</th>
+
+        </tr>
+        {% for j in jogador %}
+            <tr>
+                <th>{{ j.id }}</th>
+                <th>{{ j.nome }}</th>
+                <th>{{ j.data_nascimento }}</th>
+                <th>{{ j.nacionalidade }}</th>
+                <th>{{ j.equipa }}</th>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+

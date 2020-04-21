@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<img src="C:\Users\35196\Desktop\MC_15_04_FINAL\app\templates\PERFIL.png" alt="Mixed Creations" width="100" height="100">
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Mixed Creations</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
+      <li><a href="{{ url_for('competicao') }}">Competicao</a></li>
+      <li><a href="{{ url_for('vercompeticao') }}">Ver Competicao</a></li>
+      <li><a href="{{ url_for('equipa') }}">Equipa</a></li>
+      <li><a href="{{ url_for('verequipa') }}">Ver Equipa</a></li>
+      <li><a href="{{ url_for('jogador') }}">Jogador</a></li>
+      <li><a href="{{ url_for('verjogador') }}">Ver Jogador</a></li>
+      <li><a href="{{ url_for('jogo') }}">Jogo</a></li>
+      <li><a href="{{ url_for('verjogo') }}">Ver Jogo</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+
+<div class="image">
+<img src="C:\Users\35196\Desktop\MC_15_04_FINAL\app\templates\PERFIL.png" alt="Mixed Creations" width="100" height="100">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+{% extends "base2.html" %}
+
+{% block content %}
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Modalidade</th>
+            <th>Local</th>
+        </tr>
+        {% for e in equipa %}
+            <tr>
+                <th>{{ e.id }}</th>
+                <th>{{ e.nome }}</th>
+                <th>{{ e.modalidade }}</th>
+                <th>{{ e.local }}</th>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
